@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+}
+
+.bg-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  filter: blur(8px);
+  object-fit: cover;
+}
+
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  max-width: 1000px;
+}
+.carousel {
+  display: flex;
+  gap: 20px;
+}
+.carousel.sliding-transition {
+  transition: all 0.5s ease-in-out;
+}
+.arrow {
+  width: 50px;
+  height: 50px;
+  margin: 0;
+  padding: 0;
+  font-size: 30px;
+  /* The font size is better not to exceed 35px, as the higher the value the arrows won't be centered vertically (although we're using flex and centering the element well ) */
+  background-color: #ddd;
+  opacity: 0.5;
+  border-radius: 50%;
+  top: 50%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.arrow span {
+  display: inline-block;
+}
+.left-arrow {
+  left: 20px;
+}
+.right-arrow {
+  right: 20px;
+} 
+
+.arrow:hover {
+  opacity: 1;
+  background-color: white;
+}
